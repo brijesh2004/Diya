@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(59, 219, 219);
+}
+p{
+    top: 40%;
+    width: 100vw;
+    position: fixed;
+    height: 100vh;
+    color: gold;
+    font-size: 50px;
+    text-align: center; 
+    z-index: 400;
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.diya {
+    width: 300px;
+    height: 150px;
+    background-color: rgb(234, 89, 89);
+    box-shadow: 5px 5px 30px red;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%); 
+
+}
+
+.diya:before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 80px;
+    background-color: rgb(227, 227, 17);
+    border-radius: 50%;
+    border: 10px solid rgba(0, 0, 0, 0.862);
+    box-sizing: border-box;
+    top: -23%;
+}
+
+.diya::after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 200px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 50%;
+    bottom: 90%;
+    box-shadow: 0px 0px 50px rgb(236, 236, 30),0px 0px 30px rgb(236, 236, 30);
+    animation: animate 2s ease infinite;
+    transform-origin: bottom;
+}
+
+@keyframes animate {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.1) scaleX(1.05);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+.bida{
+   position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 5%;
+    background-color: black;
+    border-radius: 50%;
+   
+}
+
+.diwali{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+    color: rgb(26, 255, 0);
+    border: 0px solid rebeccapurple;
+    background-color: darkorchid;
+    box-shadow: 10px 10px 10px rgb(255, 235, 185);
+    text-shadow: 5px 5px 5px red;
+}
